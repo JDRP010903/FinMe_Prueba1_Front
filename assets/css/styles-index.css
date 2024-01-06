@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: #343a40;
+}
+
+main {
+    margin-top: 100px;
+}
+
+.logoImg {
+    height: 70px;
+}
+
+.cardIngresos {
+    transition: transform 0.3s ease;
+}
+
+.cardIngresos:hover {
+    transform: scale(1.03); /* Aumenta el tamaño a 120% */
+}
+
+.contenedorGrafica {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}

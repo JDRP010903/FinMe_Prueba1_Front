@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinMe</title>
+    <!-- Link Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Link to css -->
+    <link rel="stylesheet" href="./assets/css/styles-index.css">
+</head>
+<body>
+    <header>
+            <nav class="navbar navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logoImg" src="./assets/Images/Logo.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                            <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                    </div>
+                </div>
+                </div>
+            </nav>
+    </header>
+
+    <main class="container">
+        <div class="row">
+            <section class="col ingresosContainer">
+                <div class="card text-bg-success mb-3 cardIngresos" style="max-width: 18rem;">
+                    <div class="card-header text-center">INGRESOS</div>
+                    <div class="card-body">
+                        <h5 class="card-title">+ $5529.00</h5>
+                    </div>
+                </div>
+            </section>
+
+            <section class="col egresosContainer">
+                <div class="card text-bg-danger mb-3 cardIngresos" style="max-width: 18rem;">
+                    <div class="card-header text-center">EGRESOS</div>
+                    <div class="card-body">
+                        <h5 class="card-title">- $2839.20</h5>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="row-col">
+            <div class="card text-bg-light mb-3 cardIngresos">
+                <div class="card-body">
+                    <h4 class="card-title text-center">SALDO TOTAL</h4>
+                    <h5 class="card-title text-center">$ 2589.20</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-col">
+            <div class="card text-bg-dark mb-3 cardIngresos contenedorGrafica">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Historico del mes</h5>
+                    <button onclick="cambiarSegmento(-1)">Anterior</button>
+                    <button onclick="cambiarSegmento(1)">Siguiente</button>
+                    <canvas id="miGrafico"></canvas>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Chart Js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Docs JS -->
+    <script src="./assets/js/historicoMes.js"></script>
+</body>
+</html>
